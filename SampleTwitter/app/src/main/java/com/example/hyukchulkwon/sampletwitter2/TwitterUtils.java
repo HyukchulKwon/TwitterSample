@@ -1,16 +1,17 @@
-package com.example.hyukchulkwon.sampletwitter.Util;
+package com.example.hyukchulkwon.sampletwitter2;
+
+
+import android.content.Context;
+import android.content.SharedPreferences;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 
-import com.example.hyukchulkwon.sampletwitter.R;
-
+/**
+ * Created by hyukchul.kwon on 15/03/12.
+ */
 public class TwitterUtils {
-
     private static final String TOKEN = "token";
     private static final String TOKEN_SECRET = "token_secret";
     private static final String PREF_NAME = "twitter_access_token";
@@ -37,22 +38,20 @@ public class TwitterUtils {
 
     /**
      * アクセストークンをプリファレンスに保存します。
-     *
      * @param context
      * @param accessToken
      */
     public static void storeAccessToken(Context context, AccessToken accessToken) {
         SharedPreferences preferences = context.getSharedPreferences(PREF_NAME,
                 Context.MODE_PRIVATE);
-        Editor editor = preferences.edit();
+        SharedPreferences.Editor editor = preferences.edit();
         editor.putString(TOKEN, accessToken.getToken());
         editor.putString(TOKEN_SECRET, accessToken.getTokenSecret());
         editor.commit();
     }
 
     /**
-     * アクセストークンをプリファレンスから読み込みます。
-     *
+     * プリファレンスからアクセストークンを取得する。
      * @param context
      * @return
      */
@@ -68,11 +67,6 @@ public class TwitterUtils {
         }
     }
 
-    /**
-     * アクセストークンが存在する場合はtrueを返します。
-     *
-     * @return
-     */
     public static boolean hasAccessToken(Context context) {
         return loadAccessToken(context) != null;
     }

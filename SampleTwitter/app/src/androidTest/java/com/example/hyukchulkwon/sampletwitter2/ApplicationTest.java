@@ -1,4 +1,4 @@
-package com.example.hyukchulkwon.sampletwitter;
+package com.example.hyukchulkwon.sampletwitter2;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

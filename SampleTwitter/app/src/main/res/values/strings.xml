@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">SampleTwitter</string>
+    <string name="app_name">SampleTwitter2</string>
+
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="twitter_consumer_key">crGz7F6jh16MK2h8awl5hAwoD</string>
     <string name="twitter_consumer_secret">D41Zl4Xd8kZaAWdB7Xt3aSQUQtapAGvshsCoDYckveUldLJbN7</string>
     <string name="title_activity_twitter_oauth">TwitterOAuthActivity</string>
+    <string name="action_settings">Settings</string>
     <string name="twitter_callback_url">back://twitter</string>
 </resources>
